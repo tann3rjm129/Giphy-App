@@ -100,10 +100,11 @@ $("#giphy-div").on("click", ".result-gifs", function() {
 
   });
 
-});
 
 // adds function to clear button
 $("#resetButton").on("click", "#clear", function() {
 
 	$("#giphy-div").empty();
+});
+
 });
