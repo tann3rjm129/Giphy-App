@@ -1,6 +1,49 @@
 
 .tvShowButtons {
 	text-align: center;
-	color: blue;
 	margin: 20px 20px 20px 20px;
+}
+
+.clearButton {
+	text-align: center;
+	margin: 0px 40px 0px 20px;
+
+}
+
+.header {
+	background-image: url(../images/brick-background.jpg);
+	background-size: cover;
+	border-bottom: 8px solid #b0dbd7;
+}
+
+.fonts {
+	font-family: 'Rock Salt', cursive !important;
+	
+}
+
+body { background-color: #494747; 
+		}
+
+.box2 { border-bottom: 8px solid #b0dbd7;
+	border-top: 8px solid #b0dbd7;
+margin-top: 0px; 
+}
+
+.result-gifs {
+	border-radius: 4px;
+
+}
+
+.gif-divs {
+	margin: 20px 20px 20px 20px;
+	float: left; 
+	display: inline;
+}
+
+#giphy-div{
+	align-content: center;
+}
+
+a {
+    color: #9576bd;
 }

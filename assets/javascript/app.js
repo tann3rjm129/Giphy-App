@@ -2,7 +2,7 @@
 $(document).ready( function () {
 
 
-var starterButtons = ["Family Guy", "South Park", "Archer"];
+var starterButtons = ["Family Guy", "South Park", "Archer", "Dragon Ball Z", "Parks and Recreation", "The Office", "Stranger Things", "Game of Thrones", "Rick and Morty", "30 Rock", "Veep", "Portlandia", "House of Cards"];
 
 var newButtons = [];
 
@@ -10,8 +10,10 @@ var newButtons = [];
 
 function buttonCreater() {
 
+	$("#resetButton").append("<button id='clear' class='btn fonts clearButton' style='color: white; background-color: #b0dbd7; border: 1px solid white; float: left;'>Clear</button>")
+
 	for (i=0; i<starterButtons.length; i++) {
-		$("#button-div").append("<button class='tvShowButtons' data-name='"+ starterButtons[i] +"'>"+ starterButtons[i] +"</button>");
+		$("#button-div").append("<button class='btn tvShowButtons fonts' style='color: white; background-color: #b0dbd7; border: 1px solid white; float: left;' data-name='"+ starterButtons[i] +"'>"+ starterButtons[i] +"</button>");
 	};
 };
 
@@ -24,7 +26,7 @@ buttonCreater(starterButtons);
 		newButtons = $("#tvShowInput").val().trim();
 
 		event.preventDefault();
-		$("#button-div").append("<button class='tvShowButtons' data-name='"+ newButtons +"'>"+ newButtons +"</button>");
+		$("#button-div").append("<button class='btn tvShowButtons fonts'style='color: white; background-color: #b0dbd7; border: 1px solid white; float: left;' data-name='"+ newButtons +"'>"+ newButtons +"</button>");
 
 	});
 
@@ -49,6 +51,7 @@ var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ tvShow +"&api_key=LBzJ
 
 // creates div for "p and image" of gif
       		var showDiv = $("<div>");
+      		showDiv.addClass("gif-divs");
 
 // text part of "rating"
 
@@ -59,10 +62,10 @@ var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ tvShow +"&api_key=LBzJ
 // image part of gif
 
       		var showImage = $("<img>");
-      		showImage.attr("src", response.data[j].images.downsized_still.url);
+      		showImage.attr("src", response.data[j].images.fixed_height_still.url);
       		showImage.attr("data-state", "still");
-      		showImage.attr("data-animate", response.data[j].images.downsized.url);
-      		showImage.attr("data-still", response.data[j].images.downsized_still.url);
+      		showImage.attr("data-animate", response.data[j].images.fixed_height.url);
+      		showImage.attr("data-still", response.data[j].images.fixed_height_still.url);
       		showImage.addClass("result-gifs");
 
 // appending images and rating to showDiv
@@ -99,3 +102,8 @@ $("#giphy-div").on("click", ".result-gifs", function() {
 
 });
 
+// adds function to clear button
+$("#resetButton").on("click", "#clear", function() {
+
+	$("#giphy-div").empty();
+});

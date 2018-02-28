@@ -7,48 +7,79 @@
 <!-- Bootstrap File -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+ <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- Buttons Div -->
   <div class="row">
-      <div class="col-md-12" id="button-div">
-        
-      </div>
-  </div>
+    <div class="col-md-12">
 
-  <div class="container">
-      <div class="row">
-        
-      <!-- Giphy images div container -->
+      <div class="jumbotron jumbotron-fluid header">
+        <div class="container">
 
-      <div class="col-md-8" id="giphy-div">
-        
-      </div>
+          <h1 class="display-4 fonts" style="margin-left: 50%; color: white;">Giphy TV-Show app</h1>
+          <p class="lead fonts" style="margin-left: 50%; margin-top: 20px; color: white;">No strings attached! Add your own show or just click a button below, to let the good times and "gifs" roll!</p>
+          
+          <form>
 
-      <!-- Aside for giphy button image creater-->
-      <div class="col-md-4">
-
-        <form>
-
-          <div class="form-group">
-            <label for="exampleInputTv1">Add a TV Show</label>
-            <input type="text" class="form-control" id="tvShowInput" placeholder="Blah, blah, blah....">
+          <div class="form-group" style="margin-left: 50%; margin-top: 60px;">
+            <label for="exampleInputTv1" class="fonts" style="color: white;">Add a TV Show</label>
+            <input type="text" class="form-control fonts" id="tvShowInput" placeholder="Blah, blah, blah....">
           </div>
 
-          <button type="submit" class="btn btn-primary" id="newShowButton">Submit</button>
+          <button type="submit" class="btn fonts" id="newShowButton" style="margin-left: 50%; color: white; background-color: #b0dbd7; border: 1px solid white;">Submit</button>
 
         </form>
 
-        </form>
-        
+        </div>
       </div>
 
-      </div>
-
+    </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron jumbotron-fluid box2" style="opacity: 0.85;">
+        <div class="container">
+              <p class="lead fonts" style="color: #494747; text-align: center; margin-bottom: 20px;">Click a button below to add gifs to the page. Don't forget to click the gifs to animate them! Feel free to pause any, by clicking the animated gif again. Click any another TV show button to replace your gifs with more gifs! Or hit the clear button to remove them all.</p>
+
+  <!-- Buttons Div -->
+              <div class="row">
+                <div class="col-md-12" id="button-div">
+        
+                </div>
+              </div>
+  <!-- giphs div -->
+              <div class="row">
+                  <div class="col-md-12 fonts" id="giphy-div">
+                    
+                  </div>
+              </div>
+              <!-- clear button -->
+              <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                <div id="resetButton" style="margin-top: 30px;"></div>
+                </div>
+                <div class="col-md-5"></div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                <p style="color: #494747; text-align: center; font-size: 10px; margin-top: 40px; margin-bottom: -40px;" class="fonts">Click <a href="https://tann3rjm129.github.io/Bootstrap-Portfolio/">here</a> to return to Tanner's Portfolio</p>
+                </div>
+                <div class="col-md-4"></div>
+              </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.js"
