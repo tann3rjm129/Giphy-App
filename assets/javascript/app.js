@@ -15,6 +15,7 @@ function buttonCreater() {
 	for (i=0; i<starterButtons.length; i++) {
 		$("#button-div").append("<button class='btn tvShowButtons fonts' style='color: white; background-color: #b0dbd7; border: 1px solid white; float: left;' data-name='"+ starterButtons[i] +"'>"+ starterButtons[i] +"</button>");
 	};
+
 };
 
 buttonCreater(starterButtons);
@@ -27,7 +28,7 @@ buttonCreater(starterButtons);
 
 		event.preventDefault();
 		$("#button-div").append("<button class='btn tvShowButtons fonts'style='color: white; background-color: #b0dbd7; border: 1px solid white; float: left;' data-name='"+ newButtons +"'>"+ newButtons +"</button>");
-
+		newButtons =$("#tvShowInput").val("");
 	});
 
 // When you click the TV Show buttons, the giphy images appear
